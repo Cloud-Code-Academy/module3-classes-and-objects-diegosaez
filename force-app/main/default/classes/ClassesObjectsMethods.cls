@@ -325,7 +325,7 @@ public with sharing class ClassesObjectsMethods {
         // Create a new Book object with title "A Brief History of Time" and author "Stephen Hawking"
 
         // Update the pages for A Brief History of Time to 256
-
+        listBooks[1].pages = '256';
         // Add the book to the list
         
         return listBooks; // Replace null with the variable you used to store the result      
@@ -356,19 +356,19 @@ public with sharing class ClassesObjectsMethods {
         }
         // Getter method that returns the name of the person
         public String getName(){
-            return name;
+            return this.name;
         }
         // Getter method that returns the age of the person
         public Integer getAge(){
-            return age;
+            return this.age;
         }
         // Setter method that sets the name of the person
         public void setName(String newName){
-            name = newName;
+            this.name = newName;
         }
         // Setter method that sets the age of the person
         public void setAge(Integer newAge){
-            age = newAge;
+            this.age = newAge;
         }
     }
 
