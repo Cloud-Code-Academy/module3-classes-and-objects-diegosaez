@@ -272,7 +272,7 @@ public with sharing class ClassesObjectsMethods {
         // pages
         public String title;
         public String author;
-        public String pages;
+        public Integer pages;
         
         // Book constructor to initialize the title and author
         public Book(String title, String author) {
@@ -316,18 +316,18 @@ public with sharing class ClassesObjectsMethods {
     public static List<Book> generateBookList(Book myBook1) {
         // Create a list of books
         List<Book> listBooks = new List<Book>();
-        listBooks.add(new Book('Harry Potter and the Chamber of Secrets', 'J.K. Rowling'));
-        listBooks.add(new Book('A Brief History of Time', 'Stephen Hawking'));
         // Update the title and author of myBook1
-        listBooks[0].pages = '352';
+        myBook1.author = 'J.K. Rowling';
+        myBook1.title = 'Harry Potter and the Chamber of Secrets';
         // Update the pages for myBook1 to 352
-
+        myBook1.pages = 352;
+        listBooks.add(myBook1);
         // Create a new Book object with title "A Brief History of Time" and author "Stephen Hawking"
-
+        Book myBook2 = new Book('A Brief History of Time', 'Stephen Hawking');
         // Update the pages for A Brief History of Time to 256
-        listBooks[1].pages = '256';
+        myBook2.pages = 256;
         // Add the book to the list
-        
+        listBooks.add(myBook2);
         return listBooks; // Replace null with the variable you used to store the result      
     }
 
